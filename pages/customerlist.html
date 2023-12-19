@@ -69,26 +69,66 @@
             </div>
         </div>
     </nav>
-    <div class="row mt-5">
+    <div class="row bg-black mt-4 pt-5 "></div>
+    <div class="row bg-secondary pt-2 ">
+        <div class="col-1 m-0 p-0 pt-1">
+            <button type="button" class="btn  btn-secondary" style="color: rgb(0, 0, 0); width: 100%;">
+                <img src="../style/icons/plus-circle.svg" />
+                New
+            </button>
+        </div>
+        <div class="col-1 m-0 p-0 pt-1">
+        </div>
+        <div class="col-1 m-0 p-0 pt-1">
+        </div>
+        <div class="col-1 m-0 p-0 pt-1">
+        </div>
+        <div class="col-1 m-0 p-0 pt-1">
+        </div>
+        <div class="col-1 m-0 p-0 pt-1">
+        </div>
+        <div class="col-1 m-0 p-0 pt-1">
+        </div>
+        <div class="col-1 m-0 p-0 pt-1">
+        </div>
+        <div class="col-1 m-0 p-0 pt-1">
+        </div>
+        <div class="col-1 m-0 p-0 nav-item dropdown pt-1">
+        </div>
+        <div class="col-2">
+          <form class="d-flex p-1" role="search">
+            <input class="form-control me-2 bg-secondary-subtle" type="search" placeholder="Search" aria-label="Search" style="border-color: rgb(33, 37, 41);" >
+            <button class="btn  btn-dark" type="submit" style="color: rgb(233, 236, 239)">Search</button>
+        </form>
+        </div>
+    </div>
+    <div class="row mt-3">
       <div class="col-12 text-center">
-        <h3 class="display-5 mt-5 mb-3">Customers</h3>
+        <h3 class="display-5">Customers</h3>
         <div class="list">
           <form method="get">
             <table class="table table-hover table-bordered table-secondary m-2" style="width:99%" id="table2"> 
               <thead class="table-dark"> 
                 <tr> 
-                  <th style="width:30%">Company</th>
-                  <th style="width:20%">Contact Person</th>  
+                  <th style="width:20%">Company</th>
+                  <th style="width:20%">Address</th>
+                  <th style="width:15%">Contact Person</th>
                   <th style="width:15%">Tel No</th>
-                  <th style="width:35%">e-mail</th>   
+                  <th style="width:20%">e-mail</th>
+                  <th style="width:10%"></th>
                 </tr> 
               </thead>
               <tbody>
                 <tr>    
                   <td><input type="text" class="txtinput" style="width:100%" name="company" value="Darios Deli"/></td> 
+                  <td><input type="text" class="txtinput" style="width:100%" name="company" value="10 Deli Street, Rustenburg"/></td>
                   <td><input type="text" class="txtinput" style="width:100%" name="contact" value="Dario"/></td> 
                   <td><input type="text" class="txtinput" style="width:100%"  name="tel" value="082 665 4324"/></td>
                   <td><input type="text" class="txtinput" style="width:100%"  name="email" value="NA"/></td> 
+                  <td><a href=""><button type="button" class="btn  btn-secondary float-start" style="color: rgb(0, 0, 0); width: 30%;">
+                    <img src="../style/icons/trash.svg" />
+                    </button></a>
+                  </td>
                 </tr>
               </tbody>
             </table>
