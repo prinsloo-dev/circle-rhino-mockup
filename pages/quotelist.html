@@ -69,32 +69,85 @@
             </div>
         </div>
     </nav>
-    <div class="row mt-5">
+    <div class="row bg-black mt-4 pt-5 "></div>
+    <div class="row bg-secondary pt-2 ">
+        <div class="col-1 m-0 p-0 pt-1">
+            <button type="button" class="btn  btn-secondary" style="color: rgb(0, 0, 0); width: 100%;">
+                <img src="../style/icons/plus-circle.svg" />
+                New
+            </button>
+        </div>
+        <div class="col-1 m-0 p-0 pt-1">
+        </div>
+        <div class="col-1 m-0 p-0 pt-1">
+        </div>
+        <div class="col-1 m-0 p-0 pt-1">
+        </div>
+        <div class="col-1 m-0 p-0 pt-1">
+        </div>
+        <div class="col-1 m-0 p-0 pt-1">
+        </div>
+        <div class="col-1 m-0 p-0 pt-1">
+        </div>
+        <div class="col-1 m-0 p-0 pt-1">
+        </div>
+        <div class="col-1 m-0 p-0 pt-1">
+        </div>
+        <div class="col-1 m-0 p-0 nav-item dropdown pt-1">
+        </div>
+        <div class="col-2">
+            <form class="d-flex p-1" role="search">
+                <input class="form-control me-2 bg-secondary-subtle" type="search" placeholder="Search" aria-label="Search" style="border-color: rgb(33, 37, 41);" >
+                <button class="btn  btn-dark" type="submit" style="color: rgb(233, 236, 239)">Search</button>
+            </form>
+        </div>
+    </div>
+    <div class="row mt-3">
       <div class="col-12 text-center">
-        <h3 class="display-5 mt-5 mb-3">Quotes</h3>
+        <h3 class="display-5">Quotes</h3>
+        <div class="col-1"></div>
         <div class="list">
           <form method="get">
             <table class="table table-hover table-bordered table-secondary m-2" style="width:99%" id="table2">
               <thead class="table-dark">
                 <tr> 
-                  <th style="width:10%">Quote No.</th>
-                  <th style="width:55%">Customer</th>  
+                  <th style="width:5%">Quote No.</th>
+                  <th style="width:25%">Customer</th>  
                   <th style="width:20%">Date</th>
-                  <th style="width:15%">Status</th>   
+                  <th style="width:20%">Status</th>
+                  <th style="width:10%"></th>
                 </tr>
               </thead> 
               <tbody>
                 <tr>    
-                  <td><a href="quote.html" class="txtinput" style="width:100%" >70958</a></td>
+                  <td>70958</td>
                   <td><input type="text" class="txtinput" style="width:100%" name="customer" value="Darios Deli"/></td> 
                   <td><input type="text" class="txtinput" style="width:100%"  name="date" value="14 November 2023"/></td>
-                  <td><input type="text" class="txtinput" style="width:100%"  name="status" value="Waiting Acceptance"/></td> 
+                  <td><input type="text" class="txtinput" style="width:100%"  name="status" value="Open"/></td> 
+                  <td><a href="./quote.html"><button type="button" class="btn  btn-secondary float-start" style="color: rgb(0, 0, 0); width: 30%;">
+                    <img src="../style/icons/pencil-square.svg" />
+                    </button></a>
+                  </td>
                 </tr>
                 <tr>    
-                  <td><a href="quote.html" class="txtinput" style="width:100%" >70959</a></td>
+                  <td>70959</td>
                   <td><input type="text" class="txtinput" style="width:100%" name="customer" value="Darios Deli"/></td> 
                   <td><input type="text" class="txtinput" style="width:100%"  name="date" value="16 November 2023"/></td>
-                  <td><input type="text" class="txtinput" style="width:100%"  name="status" value="Waiting Acceptance"/></td> 
+                  <td><input type="text" class="txtinput" style="width:100%"  name="status" value="Accepted"/></td> 
+                  <td><a href="./quote.html"><button type="button" class="btn  btn-secondary float-start" style="color: rgb(0, 0, 0); width: 30%;">
+                    <img src="../style/icons/pencil-square.svg" />
+                    </button></a>
+                  </td>
+                </tr>
+                <tr>    
+                  <td>70960</td>
+                  <td><input type="text" class="txtinput" style="width:100%" name="customer" value="Darios Deli"/></td> 
+                  <td><input type="text" class="txtinput" style="width:100%"  name="date" value="18 November 2023"/></td>
+                  <td><input type="text" class="txtinput" style="width:100%"  name="status" value="Sent"/></td> 
+                  <td><a href="./quote.html"><button type="button" class="btn  btn-secondary float-start" style="color: rgb(0, 0, 0); width: 30%;">
+                    <img src="../style/icons/pencil-square.svg" />
+                    </button></a>
+                  </td>
                 </tr>
               </tbody>
             </table>
