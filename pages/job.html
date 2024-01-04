@@ -124,16 +124,20 @@
         <div class="col-1 m-0 p-0 pt-1">
             <button type="button" class="btn  btn-secondary" style="color: rgb(0, 0, 0); width: 100%;">
                 <img src="../style/icons/check-circle.svg" />
-                Close
+                Close Job
             </button>
         </div>
         <div class="col-1 m-0 p-0 pt-1">
-            <button type="button" class="btn  btn-secondary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDelete" aria-controls="offcanvasDelete" style="color: rgb(0, 0, 0); width: 100%;">
-                <img src="../style/icons/trash.svg" />
-                Delete
+            <button type="button" class="btn  btn-secondary" style="color: rgb(0, 0, 0); width: 100%;">
+                <img src="../style/icons/printer.svg" />
+                Print Job Card
             </button>
         </div>
         <div class="col-1 m-0 p-0 pt-1">
+          <button type="button" class="btn  btn-secondary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDelete" aria-controls="offcanvasDelete" style="color: rgb(0, 0, 0); width: 100%;">
+            <img src="../style/icons/trash.svg" />
+            Delete
+        </button>
         </div>
         <div class="col-1 m-0 p-0 pt-1">
         </div>
@@ -187,6 +191,32 @@
               </div>
               <div class="col-2">
                 <input type="text" class="form-control"  name="address" value="10 Deli Street, Rustenburg">
+              </div>
+            </div>
+            <div class="row g-3">
+              <div class="col-1"></div>
+              <div class="col-1">
+                <label for="input" class="col-form-label float-end">Fitment Date:</label>
+              </div>
+              <div class="col-2">
+                <input type="text" class="form-control"  name="contact_person" value="16 November 2023">
+              </div>
+              <div class="col-1">
+                <label for="input" class="col-form-label float-end">Completion date:</label>
+              </div>
+              <div class="col-2">
+                <input type="text" class="form-control"  name="contact_number" value="17 November 2023">
+              </div>
+              <div class="col-1">
+                <label for="input" class="col-form-label float-end">Payment Status:</label>
+              </div>
+              <div class="col-2">
+                <select class="form-select" id="inputGroupSelect01">
+                  <option value="1">Full Payment</option>
+                  <option value="2">Deposit</option>
+                  <option value="3">Order</option>
+                  <option value="3">COD</option>
+                </select>
               </div>
             </div>
           </form>
