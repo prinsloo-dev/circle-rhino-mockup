@@ -117,11 +117,15 @@
       </div>
       <div class="col-1 m-0 p-0 pt-1">
           <button type="button" class="btn  btn-secondary" style="color: rgb(0, 0, 0); width: 100%;">
-              <img src="../style/icons/plus-circle.svg" />
-              Create Jobs
+              <img src="../style/icons/printer.svg" />
+              Print
           </button>
       </div>
       <div class="col-1 m-0 p-0 pt-1">
+        <button type="button" class="btn  btn-secondary" style="color: rgb(0, 0, 0); width: 100%;">
+          <img src="../style/icons/plus-circle.svg" />
+          Create Jobs
+      </button>
       </div>
       <div class="col-1 m-0 p-0 pt-1">
       </div>
@@ -153,7 +157,11 @@
                 <label for="input" class="col-form-label float-end">Customer:</label>
               </div>
               <div class="col-2">
-                <input type="text" class="form-control"  name="Job Title" value="Darios Deli">
+                <select class="form-select" id="inputGroupSelect01">
+                  <option value="1">Darios Deli</option>
+                  <option value="2">Customer 2</option>
+                  <option value="3">Customer 3</option>
+                </select>
               </div>
             </div> 
             <div class="row g-3">
@@ -162,7 +170,11 @@
                 <label for="input" class="col-form-label float-end">Contact Person:</label>
               </div>
               <div class="col-2">
-                <input type="text" class="form-control"  name="Job Title" value="Dario">
+                <select class="form-select" id="inputGroupSelect01">
+                  <option value="1">Darios</option>
+                  <option value="2">Person 2</option>
+                  <option value="3">Person 3</option>
+                </select>
               </div>
               <div class="col-1">
                 <label for="input" class="col-form-label float-end">Tel No:</label>
@@ -220,8 +232,9 @@
             <table class="table table-hover table-bordered table-secondary m-2 mt-2" style="width:99%" id="table2"> 
               <thead class="table-dark"> 
                 <tr> 
+                  <th style="width:2%"></th>
                   <th style="width:5%">Qty</th>
-                  <th style="width:15%">Name</th>
+                  <th style="width:13%">Name</th>
                   <th style="width:45%">Description</th>
                   <th style="width:10%">Size</th>
                   <th style="width:8%">Price Each</th>
@@ -230,7 +243,8 @@
                 </tr> 
               </thead>
               <tbody>
-                <tr>    
+                <tr>
+                  <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td> 
                   <td><input type="text" class="txtinput"  style="width:100%" name="qty"  value="1"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="Grab & Go Counter Sign"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="3mm ACM cut outs. Fitted to counter on pins"/></td>
@@ -242,7 +256,8 @@
                     </button></a>
                   </td> 
                 </tr>
-                <tr>    
+                <tr>
+                  <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td> 
                   <td><input type="text" class="txtinput"  style="width:100%" name="qty"  value="1"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="Pizza & Pasts Counter Sign"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="3mm ACM cut outs. Fitted to counter on pins"/></td>
@@ -254,7 +269,8 @@
                     </button></a>
                   </td> 
                 </tr>
-                <tr>    
+                <tr>
+                  <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td> 
                   <td><input type="text" class="txtinput"  style="width:100%" name="qty"  value="1"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="Italy Silhouette"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="3mm ACM cut outs. Fitted to wall on pins - Illuminated @ back with LED lights"/></td>
@@ -266,7 +282,8 @@
                     </button></a>
                   </td> 
                 </tr>
-                <tr>    
+                <tr>
+                  <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td> 
                   <td><input type="text" class="txtinput"  style="width:100%" name="qty"  value="3"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="Window Arch Display"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="3mm Plexiglass cut outs. Fitted to counter on 20mm - standoffs. Digital print applied on back with white - backing"/></td>
@@ -278,7 +295,8 @@
                     </button></a>
                   </td> 
                 </tr>
-                <tr>    
+                <tr>
+                  <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td> 
                   <td><input type="text" class="txtinput"  style="width:100%" name="qty"  value="1"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="Name Light"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="LED Neon tube light 'Dario's Deli' - With 6mm clear backing"/></td>
@@ -290,7 +308,8 @@
                     </button></a>
                   </td> 
                 </tr>
-                <tr>    
+                <tr>
+                  <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td> 
                   <td><input type="text" class="txtinput"  style="width:100%" name="qty"  value="20"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="A4 Foto Canvis's"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="PVC banner c/w digital print. - Blocked over wooden frame - Blocked over wooden frame"/></td>
@@ -302,7 +321,8 @@
                     </button></a>
                   </td> 
                 </tr>
-                <tr>    
+                <tr>
+                  <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td> 
                   <td><input type="text" class="txtinput"  style="width:100%" name="qty"  value="1"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="'Family' Logo"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="3mm ACM cut outs. Fitted to wall on pins"/></td>
@@ -314,7 +334,8 @@
                     </button></a>
                   </td> 
                 </tr>
-                <tr>    
+                <tr>
+                  <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="qty"  value="1"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="Main Sign"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="3mm Fabricated Plexi glass logo. - With 60mm returns. Internally illuminated. - Fitted on 3mm ACM Boxed back board"/></td>
@@ -326,7 +347,8 @@
                     </button></a>
                   </td> 
                 </tr>
-                <tr>    
+                <tr>
+                  <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td> 
                   <td><input type="text" class="txtinput"  style="width:100%" name="qty"  value="1"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="Fitment"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="1 x Cherry Picker - 1 x Fitment & Conection of all signage"/></td>
