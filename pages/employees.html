@@ -7,6 +7,7 @@
     <link href="../style/css/bootstrap.css" rel="stylesheet">
 </head>
 <body class="bg-body-secondary">
+  <div id="navbar"></div>
   <nav class="navbar bg-dark fixed-top">
     <div class="container-fluid row">
         <div class="col">
@@ -149,8 +150,19 @@
 
     <script src="../style/js/bootstrap.bundle.js"></script>
     <script>
-      // Add some JavaScript to check for password match and display error message
-
-    </script>
+      // Function to fetch and include the navbar
+      function includeNavbar() {
+          fetch('../layouts/navp.html')
+              .then(response => response.text())
+              .then(data => {
+                  // Include the navbar HTML content in the container
+                  document.getElementById('navbar').innerHTML = data;
+              })
+              .catch(error => console.error('Error fetching navbar:', error));
+      }
+  
+      // Call the function to include the navbar when the page loads
+      document.addEventListener('DOMContentLoaded', includeNavbar);
+  </script>
   </body>
 </html>

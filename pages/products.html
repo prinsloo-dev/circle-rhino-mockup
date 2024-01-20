@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+      <meta charset="UTF-8">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>Circle Rhino Job System</title>
+      <link href="../style/css/bootstrap.css" rel="stylesheet">
+  </head>
+  <body class="bg-body-secondary">
+    <div id="navbar"></div>
+    <div class="row bg-black mt-4 pt-5 "></div>
+    <div class="row bg-secondary pt-2 ">
+        <div class="col-1 m-0 p-0 pt-1">
+            <button type="button" class="btn  btn-secondary" onclick="addRow()" style="color: rgb(0, 0, 0); width: 100%;">
+                <img src="../style/icons/plus-circle.svg" />
+                New
+            </button>
+        </div>
+        <div class="col-1 m-0 p-0 pt-1">
+        </div>
+        <div class="col-1 m-0 p-0 pt-1">
+        </div>
+        <div class="col-1 m-0 p-0 pt-1">
+        </div>
+        <div class="col-1 m-0 p-0 pt-1">
+        </div>
+        <div class="col-1 m-0 p-0 pt-1">
+        </div>
+        <div class="col-1 m-0 p-0 pt-1">
+        </div>
+        <div class="col-1 m-0 p-0 pt-1">
+        </div>
+        <div class="col-1 m-0 p-0 pt-1">
+        </div>
+        <div class="col-1 m-0 p-0 nav-item dropdown pt-1">
+        </div>
+        <div class="col float-end">
+            <form class="d-flex p-1 float-end" role="search">
+                <input class="form-control me-2 bg-secondary-subtle" type="search" placeholder="Search" aria-label="Search" style="border-color: rgb(33, 37, 41);" >
+                <button class="btn  btn-dark " type="submit" style="color: rgb(233, 236, 239)">Search</button>
+            </form>
+        </div>
+    </div>
+    <div class="row mt-3">
+      <div class="col-12 text-center">
+        <h3 class="display-5">Products</h3>
+        <div class="list">
+          <form method="get">
+            <table class="table table-hover table-bordered table-secondary m-2" style="width:99%" id="table2">
+              <thead class="table-dark"> 
+                <tr> 
+                  <th style="width:45%">Product name</th>
+                    <th style="width:45%">Descriuption</th>
+                    <th style="width:10%"></th>
+                </tr> 
+              </thead> 
+              <tbody>
+                <tr>
+                  <td><input type="text" class="txtinput" style="width:100%" name="customer" value="Counter Sign"/></td>
+                  <td><input type="text" class="txtinput" style="width:100%" name="customer" value="3mm ACM cut outs. Fitted to counter on pins"/></td> 
+                  <td>
+                    <a href="#" onclick="deleteRow(this)">
+                      <button type="button" class="btn btn-secondary float-start" style="color: rgb(0, 0, 0); width: 30%;">
+                        <img src="../style/icons/trash.svg" />
+                      </button>
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </form>
+        </div>
+      </div>
+    </div>
+    <script src="../style/js/bootstrap.bundle.js"></script>
+    <script src="../style/js/index.js"></script>
+    <script>
+      // Function to fetch and include the navbar
+      function includeNavbar() {
+          fetch('../layouts/navp.html')
+              .then(response => response.text())
+              .then(data => {
+                  // Include the navbar HTML content in the container
+                  document.getElementById('navbar').innerHTML = data;
+              })
+              .catch(error => console.error('Error fetching navbar:', error));
+      }
+  
+      // Call the function to include the navbar when the page loads
+      document.addEventListener('DOMContentLoaded', includeNavbar);
+  </script>
+  </body>
+</html>
