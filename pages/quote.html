@@ -37,7 +37,7 @@
         </button>
       </div>
       <div class="col-1 m-0 p-0 pt-1">
-          <button type="button" class="btn  btn-secondary" style="color: rgb(0, 0, 0); width: 100%;">
+          <button type="button" class="btn  btn-secondary" onclick="openPDF()" style="color: rgb(0, 0, 0); width: 100%;">
               <img src="../style/icons/printer.svg" />
               Print
           </button>
@@ -361,6 +361,14 @@
   
       // Call the function to include the navbar when the page loads
       document.addEventListener('DOMContentLoaded', includeNavbar);
+
+      function openPDF() {
+        // Replace 'path/to/your.pdf' with the actual path to your PDF file
+        var pdfPath = '../pdf_templates/Darios Deli 70958 (1).pdf';
+
+        // Open the PDF in a new window or tab
+        window.open(pdfPath, '_blank');
+      }
   </script>
   </body>
 </html>
