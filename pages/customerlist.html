@@ -11,10 +11,10 @@
     <div class="row bg-black mt-4 pt-5 "></div>
     <div class="row bg-secondary pt-2 ">
         <div class="col-1 m-0 p-0 pt-1">
-            <button type="button" class="btn  btn-secondary" style="color: rgb(0, 0, 0); width: 100%;">
-                <img src="../style/icons/plus-circle.svg" />
-                New
-            </button>
+            <button type="button" class="btn  btn-secondary" onclick="addRow()" style="color: rgb(0, 0, 0); width: 100%;">
+              <img src="../style/icons/plus-circle.svg" />
+              New
+          </button>
         </div>
         <div class="col-1 m-0 p-0 pt-1">
         </div>
@@ -67,12 +67,15 @@
                   <td><input type="text" class="txtinput" style="width:100%"  name="email" value="NA"/></td> 
                   <td><input type="text" class="txtinput" style="width:100%"  name="email" value=" "/></td> 
                   <td>
-                    <a href=""><button type="button" class="btn  btn-secondary float-start m-1" style="color: rgb(0, 0, 0); width: 30%;">
-                      <img src="../style/icons/copy.svg" />
+                    <a href="#" onclick="copyRow(this)">
+                      <button type="button" class="btn  btn-secondary float-start m-1" style="color: rgb(0, 0, 0); width: 30%;">
+                        <img src="../style/icons/copy.svg" />
                       </button></a>
-                    <a href=""><button type="button" class="btn  btn-secondary float-start m-1" style="color: rgb(0, 0, 0); width: 30%;">
-                    <img src="../style/icons/trash.svg" />
-                    </button></a>
+                      <a href="#" onclick="deleteRow(this)">
+                        <button type="button" class="btn btn-secondary float-start m-1" style="color: rgb(0, 0, 0); width: 30%;">
+                          <img src="../style/icons/trash.svg" />
+                        </button>
+                      </a>
                   </td>
                 </tr>
               </tbody>
@@ -97,6 +100,52 @@
   
       // Call the function to include the navbar when the page loads
       document.addEventListener('DOMContentLoaded', includeNavbar);
+      function addRow() {
+        var table = document.getElementById("table2").getElementsByTagName('tbody')[0];
+        var newRow = table.insertRow(table.rows.length);
+
+        var cell1 = newRow.insertCell(0);
+        var cell2 = newRow.insertCell(1);
+        var cell3 = newRow.insertCell(2);
+        var cell4 = newRow.insertCell(3);
+        var cell5 = newRow.insertCell(4);
+        var cell6 = newRow.insertCell(5);
+        var cell7 = newRow.insertCell(6);
+
+        cell1.innerHTML = '<input type="text" class="txtinput" style="width:100%" name="customer" value=""/>';
+        cell2.innerHTML = '<input type="text" class="txtinput" style="width:100%" name="customer" value=""/>';
+        cell3.innerHTML = '<input type="text" class="txtinput" style="width:100%" name="customer" value=""/>';
+        cell4.innerHTML = '<input type="text" class="txtinput" style="width:100%" name="customer" value=""/>';
+        cell5.innerHTML = '<input type="text" class="txtinput" style="width:100%" name="customer" value=""/>';
+        cell6.innerHTML = '<input type="text" class="txtinput" style="width:100%" name="customer" value=""/>';
+        cell7.innerHTML = '<a href=""><button type="button" class="btn  btn-secondary float-start m-1" style="color: rgb(0, 0, 0); width: 30%;"><img src="../style/icons/copy.svg" /></button></a> <a href="#" onclick="deleteRow(this)"><button type="button" class="btn btn-secondary float-start m-1" style="color: rgb(0, 0, 0); width: 30%;"><img src="../style/icons/trash.svg" /></button></a>';
+      }
+
+      function copyRow() {
+        var table = document.getElementById("table2").getElementsByTagName('tbody')[0];
+        var newRow = table.insertRow(table.rows.length);
+
+        var cell1 = newRow.insertCell(0);
+        var cell2 = newRow.insertCell(1);
+        var cell3 = newRow.insertCell(2);
+        var cell4 = newRow.insertCell(3);
+        var cell5 = newRow.insertCell(4);
+        var cell6 = newRow.insertCell(5);
+        var cell7 = newRow.insertCell(6);
+
+        cell1.innerHTML = '<input type="text" class="txtinput" style="width:100%" name="company" value="Darios Deli"/>';
+        cell2.innerHTML = '<input type="text" class="txtinput" style="width:100%" name="company" value="10 Deli Street, Rustenburg"/>';
+        cell3.innerHTML = '<input type="text" class="txtinput" style="width:100%" name="customer" value=""/>';
+        cell4.innerHTML = '<input type="text" class="txtinput" style="width:100%" name="customer" value=""/>';
+        cell5.innerHTML = '<input type="text" class="txtinput" style="width:100%" name="customer" value=""/>';
+        cell6.innerHTML = '<input type="text" class="txtinput" style="width:100%" name="customer" value=""/>';
+        cell7.innerHTML = '<a href="#" onclick="copyRow(this)"><button type="button" class="btn  btn-secondary float-start m-1" style="color: rgb(0, 0, 0); width: 30%;"><img src="../style/icons/copy.svg" /></button></a> <a href="#" onclick="deleteRow(this)"><button type="button" class="btn btn-secondary float-start m-1" style="color: rgb(0, 0, 0); width: 30%;"><img src="../style/icons/trash.svg" /></button></a>';
+      }
+
+      function deleteRow(button) {
+        var row = button.closest('tr');
+        row.parentNode.removeChild(row);
+      }
   </script>
   </body>
 </html>
