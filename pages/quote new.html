@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Circle Rhino Job System</title>
+    <link href="../style/css/bootstrap.css" rel="stylesheet">
+</head>
+<body class="bg-body-secondary">
+  <div id="navbar"></div>
+    <div class="row bg-black mt-4 pt-5 "></div>
+    <div class="row bg-secondary pt-2 ">
+      <div class="col-1 m-0 p-0 pt-1">
+        <a href="./quotelist.html">
+          <button type="button" class="btn  btn-secondary" style="color: rgb(0, 0, 0); width: 100%;">
+              <img src="../style/icons/reply-fill.svg" />
+              Back
+          </button>
+        </a>
+      </div>
+      <div class="col-1 m-0 p-0 pt-1">
+        <button type="button" class="btn  btn-secondary" style="color: rgb(0, 0, 0); width: 100%;">
+            <img src="../style/icons/floppy.svg" />
+            Save Quote
+        </button>
+      </div>
+      <div class="col-1 m-0 p-0 pt-1">
+        <button type="button" class="btn  btn-secondary" style="color: rgb(0, 0, 0); width: 100%;">
+            <img src="../style/icons/plus-circle.svg" />
+            New Line
+        </button>
+      </div>
+      <div class="col-1 m-0 p-0 pt-1">
+        <button type="button" class="btn  btn-secondary" style="color: rgb(0, 0, 0); width: 100%;">
+          <img src="../style/icons/envelope-check.svg" />
+          Send
+        </button>
+      </div>
+      <div class="col-1 m-0 p-0 pt-1">
+          <button type="button" class="btn  btn-secondary" onclick="openPDF()" style="color: rgb(0, 0, 0); width: 100%;">
+              <img src="../style/icons/printer.svg" />
+              Print
+          </button>
+      </div>
+      <div class="col-1 m-0 p-0 pt-1">
+        <button type="button" class="btn  btn-secondary" style="color: rgb(0, 0, 0); width: 100%;">
+          <img src="../style/icons/plus-circle.svg" />
+          Create Jobs
+      </button>
+      </div>
+      <div class="col-1 m-0 p-0 pt-1">
+      </div>
+      <div class="col-1 m-0 p-0 nav-item dropdown pt-1">
+      </div>
+      <div class="col-2">
+      </div>
+  </div>
+    <div class="row m-3">
+      <div class="col-12 text-center">
+        <h3 class="display-5">Quote Details</h3>
+        <div class="form">
+          <form method="get">
+            <div class="row g-3">
+              <div class="col-1"></div>
+              <div class="col-1">
+                <label for="input" class="col-form-label float-end">Quote Number:</label>
+              </div>
+              <div class="col-2">
+                <input type="text" class="form-control" name="Job Title" value="70961">
+              </div>
+              <div class="col-1">
+                <label for="input" class="col-form-label float-end">Date:</label>
+              </div>
+              <div class="col-2">
+                <input type="text" class="form-control"  name="Job Title" value="28 January 2024">
+              </div>
+              <div class="col-1">
+                <label for="input" class="col-form-label float-end">Customer:</label>
+              </div>
+              <div class="col-2">
+                <select class="form-select" id="inputGroupSelect01">
+                  <option value="0"></option>
+                  <option value="1">Darios Deli</option>
+                  <option value="2">Customer 2</option>
+                  <option value="3">Customer 3</option>
+                </select>
+              </div>
+            </div> 
+            <div class="row g-3">
+              <div class="col-1"></div>
+              <div class="col-1">
+                <label for="input" class="col-form-label float-end">Contact Person:</label>
+              </div>
+              <div class="col-2">
+                <select class="form-select" id="inputGroupSelect01">
+                  <option value="0"></option>
+                  <option value="1">Darios</option>
+                  <option value="2">Person 2</option>
+                  <option value="3">Person 3</option>
+                </select>
+              </div>
+              <div class="col-1">
+                <label for="input" class="col-form-label float-end">Tel No:</label>
+              </div>
+              <div class="col-2">
+                <input type="text" class="form-control"  name="Job Title" value="">
+              </div>
+              <div class="col-1">
+                <label for="input" class="col-form-label float-end">e-mail:</label>
+              </div>
+              <div class="col-2">
+                <input type="text" class="form-control"  name="Job Title" value="">
+              </div>
+            </div>
+            <div class="row g-3">
+              <div class="col-1"></div>
+              <div class="col-1">
+                <label for="input" class="col-form-label float-end">Fitment Address:</label>
+              </div>
+              <div class="col-2">
+                <input type="text" class="form-control"  name="Job Title" value="">
+              </div>
+              <div class="col-1">
+                <label for="input" class="col-form-label float-end">Fitment Date:</label>
+              </div>
+              <div class="col-2">
+                <input type="text" class="form-control"  name="Job Title" value="">
+              </div>
+              <div class="col-1">
+                <label for="input" class="col-form-label float-end">Est. Comp. Date:</label>
+              </div>
+              <div class="col-2">
+                <input type="text" class="form-control"  name="Job Title" value="">
+              </div>
+            </div>
+            <div class="row g-3">
+              <div class="col-9"></div>
+              <div class="col-1 mt-5 pt-3">
+                <label for="input" class="col-form-label float-end">Sub Total:</label>
+              </div>
+              <div class="col-1 mt-5 pt-3">
+                <input type="text" class="form-control"  name="Job Title" value="">
+              </div>
+            </div>
+            <div class="row g-3">
+              <div class="col-9"></div>
+              <div class="col-1">
+                <label for="input" class="col-form-label float-end">15% V.A.T:</label>
+              </div>
+              <div class="col-1">
+                <input type="text" class="form-control"  name="Job Title" value="">
+              </div>
+            </div>
+            <div class="row g-3">
+              <div class="col-9"></div>
+              <div class="col-1">
+                <label for="input" class="col-form-label float-end">TOTAL:</label>
+              </div>
+              <div class="col-1">
+                <input type="text" class="form-control"  name="Job Title" value="">
+              </div>
+            </div>
+            <div class="row g-3">
+              <div class="col-9"></div>
+              <div class="col-1">
+                <label for="input" class="col-form-label float-end">Deposit:</label>
+              </div>
+              <div class="col-1">
+                <input type="text" class="form-control"  name="Job Title" value="">
+              </div>
+            </div>
+          </form>
+        </div>
+        <div class="list">
+          <form method="get">
+            <table class="table table-hover table-bordered table-secondary m-2 mt-2" style="width:99%" id="table2"> 
+              <thead class="table-dark"> 
+                <tr> 
+                  <th style="width:2%"></th>
+                  <th style="width:5%">Qty</th>
+                  <th style="width:13%">Name</th>
+                  <th style="width:45%">Description</th>
+                  <th style="width:10%">Size</th>
+                  <th style="width:8%">Price Each</th>
+                  <th style="width:8%">Total Price</th>
+                  <th style="width:9%"></th>  
+                </tr> 
+              </thead>
+              <tbody>
+                <tr>
+                  <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td> 
+                  <td><input type="text" class="txtinput"  style="width:100%" name="qty"  value="1"/></td>
+                  <td><select class="form-select" id="inputGroupSelect01">
+                    <option value="0"></option>
+                    <option value="1">Grab & Go Counter Sign</option>
+                    <option value="2">Pizza & Pasts Counter Sign</option>
+                    <option value="3">Italy Silhouette</option>
+                  </select></td>
+                  <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value=""/></td>
+                  <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value=""/></td>
+                  <td><input type="text" class="txtinput"  style="width:100%" name="amount"  value=""/></td>
+                  <td><input type="text" class="txtinput"  style="width:100%" name="total"  value=""/></td>
+                  <td><a href=""><button type="button" class="btn  btn-secondary float-start" style="color: rgb(0, 0, 0); width: 30%;">
+                    <img src="../style/icons/trash.svg" />
+                    </button></a>
+                  </td> 
+                </tr>
+              </tbody>
+            </table>
+          </form>
+        </div> 
+        <div class="error"></div>
+      </div>
+    </div>
+
+    <script src="../style/js/bootstrap.bundle.js"></script>
+    <script>
+      // Function to fetch and include the navbar
+      function includeNavbar() {
+          fetch('../layouts/navp.html')
+              .then(response => response.text())
+              .then(data => {
+                  // Include the navbar HTML content in the container
+                  document.getElementById('navbar').innerHTML = data;
+              })
+              .catch(error => console.error('Error fetching navbar:', error));
+      }
+  
+      // Call the function to include the navbar when the page loads
+      document.addEventListener('DOMContentLoaded', includeNavbar);
+  </script>
+  </body>
+</html>
