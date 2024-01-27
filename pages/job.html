@@ -24,35 +24,36 @@
             </button>
         </div>
         <div class="col-1 m-0 p-0 pt-1">
+          <button type="button" class="btn  btn-secondary" onclick="openPDF()" style="color: rgb(0, 0, 0); width: 100%;">
+              <img src="../style/icons/printer.svg" />
+              Print Job Card
+          </button>
+      </div>
+        <div class="col-1 m-0 p-0 pt-1">
             <button type="button" class="btn  btn-secondary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasAccept" aria-controls="offcanvasAccept" style="color: rgb(0, 0, 0); width: 100%;">
                 <img src="../style/icons/box-arrow-in-up-left.svg" />
                 Accept
             </button>
         </div>
         <div class="col-1 m-0 p-0 pt-1">
-          <button type="button" class="btn  btn-secondary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasAccept" aria-controls="offcanvasAccept" style="color: rgb(0, 0, 0); width: 100%;">
+          <button type="button" class="btn  btn-secondary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasPending" aria-controls="offcanvasPending" style="color: rgb(0, 0, 0); width: 100%;">
             <img src="../style/icons/clock.svg" />
             Pending
         </button>
         </div>
         <div class="col-1 m-0 p-0 pt-1">
-            <button type="button" class="btn  btn-secondary" style="color: rgb(0, 0, 0); width: 100%;">
+            <button type="button" class="btn  btn-secondary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasComplete" aria-controls="offcanvasComplete" style="color: rgb(0, 0, 0); width: 100%;">
                 <img src="../style/icons/check2.svg" />
                 Complete
             </button>
         </div>
         <div class="col-1 m-0 p-0 pt-1">
-            <button type="button" class="btn  btn-secondary" style="color: rgb(0, 0, 0); width: 100%;">
+            <button type="button" class="btn  btn-secondary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasClose" aria-controls="offcanvasClose" style="color: rgb(0, 0, 0); width: 100%;">
                 <img src="../style/icons/check-circle.svg" />
                 Close Job
             </button>
         </div>
-        <div class="col-1 m-0 p-0 pt-1">
-            <button type="button" class="btn  btn-secondary" onclick="openPDF()" style="color: rgb(0, 0, 0); width: 100%;">
-                <img src="../style/icons/printer.svg" />
-                Print Job Card
-            </button>
-        </div>
+        
         <div class="col-1 m-0 p-0 pt-1">
           <button type="button" class="btn  btn-secondary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDelete" aria-controls="offcanvasDelete" style="color: rgb(0, 0, 0); width: 100%;">
             <img src="../style/icons/trash.svg" />
@@ -216,7 +217,7 @@
       <div class="offcanvas-body text-center col-12">
         <form>
           <div class="row g-3">
-            <div class="col-3"></div>
+            <div class="col-1"></div>
             <div class="col-1">
               <label for="input" class="col-form-label float-end">Department:</label>
             </div>
@@ -237,7 +238,12 @@
                 <option value="3">Martin</option>
               </select>
             </div>
-            <div class="col-3"></div>
+            <div class="col-1">
+              <label for="input" class="col-form-label float-end">Assigned jobs:</label>
+            </div>
+            <div class="col-1">
+              <input type="text" class="form-control" name="Job Title" value="3">
+            </div>
           </div>
         </form>
       </div>
@@ -253,6 +259,47 @@
       </div>
       <div class="offcanvas-body text-center col-12">
         <p>Do you want to accept this job?</p>
+      </div>
+      <div class="text-center col-12">
+        <button type="button" class="btn btn-dark col-1" data-bs-dismiss="offcanvas" aria-label="Close">Yes</button>
+        <button type="button" class="btn btn-dark col-1" data-bs-dismiss="offcanvas" aria-label="Close">No</button>
+      </div>
+      <div class="offcanvas-body"></div>
+    </div>
+    <div class="offcanvas offcanvas-bottom bg-secondary" tabindex="-1" id="offcanvasPending" aria-labelledby="offcanvasPendingLabel">
+      <div class="offcanvas-header text-center col-12">
+        <h6 class="offcanvas-title col-12 display-6 m-0 p-0" id="offcanvasPendingLabel">Pending Reason</h6>
+      </div>
+      <div class="offcanvas-body text-center col-12">
+        <input type="text" class="form-control" value="">
+      </div>
+      <div class="col-1"></div>
+      <div class="text-center col-12">
+        <button type="button" class="btn btn-dark col-1" data-bs-dismiss="offcanvas" aria-label="Close">Save</button>
+        <button type="button" class="btn btn-dark col-1" data-bs-dismiss="offcanvas" aria-label="Close">Cancel</button>
+      </div>
+      <div class="offcanvas-body"></div>
+    </div>
+    <div class="offcanvas offcanvas-bottom bg-secondary" tabindex="-1" id="offcanvasComplete" aria-labelledby="offcanvasCompleteLabel">
+      <div class="offcanvas-header text-center col-12">
+        <h6 class="offcanvas-title col-12 display-6 m-0 p-0" id="offcanvasCompleteLabel">Complete Job</h6>
+      </div>
+      <div class="offcanvas-body text-center col-12">
+        <p>Do you want to complete this job?</p>
+      </div>
+      <div class="text-center col-12">
+        <button type="button" class="btn btn-dark col-1" data-bs-dismiss="offcanvas" aria-label="Close">Yes</button>
+        <button type="button" class="btn btn-dark col-1" data-bs-dismiss="offcanvas" aria-label="Close">No</button>
+      </div>
+      <div class="offcanvas-body"></div>
+    </div>
+    <div class="offcanvas offcanvas-bottom bg-secondary" tabindex="-1" id="offcanvasClose" aria-labelledby="offcanvasCloseLabel">
+      <div class="offcanvas-header text-center col-12">
+        <h6 class="offcanvas-title col-12 display-6 m-0 p-0" id="offcanvasCloseLabel">Close Job</h6>
+      </div>
+      <div class="offcanvas-body text-center col-12">
+        <p>Do you want to close this job?</p>
+        <p class="text-warning">WARNING: Only close the job when it is completed and inspected</p>
       </div>
       <div class="text-center col-12">
         <button type="button" class="btn btn-dark col-1" data-bs-dismiss="offcanvas" aria-label="Close">Yes</button>
