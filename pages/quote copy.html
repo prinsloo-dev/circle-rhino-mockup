@@ -49,6 +49,10 @@
       </button>
       </div>
       <div class="col-1 m-0 p-0 pt-1">
+        <button type="button" class="btn  btn-secondary" style="color: rgb(0, 0, 0); width: 100%;">
+          <img src="../style/icons/trash.svg" />
+          Delete
+          </button>
       </div>
       <div class="col-1 m-0 p-0 nav-item dropdown pt-1">
       </div>
@@ -61,7 +65,7 @@
         <div class="form">
           <form method="get">
             <div class="row g-3">
-              <div class="col-1"></div>
+              
               <div class="col-1">
                 <label for="input" class="col-form-label float-end">Quote Number:</label>
               </div>
@@ -69,11 +73,19 @@
                 <input type="text" class="form-control" name="Job Title" value="70961">
               </div>
               <div class="col-1">
+                <label for="input" class="col-form-label float-end">Quote Status:</label>
+              </div>
+              <div class="col-2">
+                <input type="text" class="form-control" name="Job Title" value="Open">
+              </div>
+              <div class="col-1">
                 <label for="input" class="col-form-label float-end">Date:</label>
               </div>
               <div class="col-2">
                 <input type="text" class="form-control"  name="Job Title" value="28 January 2024">
               </div>
+            </div> 
+            <div class="row g-3">
               <div class="col-1">
                 <label for="input" class="col-form-label float-end">Customer:</label>
               </div>
@@ -84,9 +96,6 @@
                   <option value="3">Customer 3</option>
                 </select>
               </div>
-            </div> 
-            <div class="row g-3">
-              <div class="col-1"></div>
               <div class="col-1">
                 <label for="input" class="col-form-label float-end">Contact Person:</label>
               </div>
@@ -111,7 +120,7 @@
               </div>
             </div>
             <div class="row g-3">
-              <div class="col-1"></div>
+              
               <div class="col-1">
                 <label for="input" class="col-form-label float-end">Fitment Address:</label>
               </div>
@@ -181,7 +190,7 @@
                   <th style="width:10%">Size</th>
                   <th style="width:8%">Price Each</th>
                   <th style="width:8%">Total Price</th>
-                  <th style="width:9%"></th>  
+                  <th style="width:9%">Starus</th>  
                 </tr> 
               </thead>
               <tbody>
@@ -189,154 +198,136 @@
                   <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td> 
                   <td><input type="text" class="txtinput"  style="width:100%" name="qty"  value="1"/></td>
                   <td><select class="form-select" id="inputGroupSelect01">
-                    <option value="1">Grab & Go Counter Sign</option>
-                    <option value="2">Pizza & Pasts Counter Sign</option>
-                    <option value="3">Italy Silhouette</option>
+                    <option value="0">Other</option>
+                    <option value="1">RAC:218-SSB-D</option>
+                    <option value="2">RHP:DEAL/EXTCAB/CAB1.2/NOR</option>
+                    <option value="3">RHP:DEAL/LWB/HDUTY</option>
                   </select></td>
-                  <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="3mm ACM cut outs. Fitted to counter on pins"/></td>
+                  <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="Grab & Go Counter Sign-3mm ACM cut outs. Fitted to counter on pins"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="1720mm x 500mm"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="amount"  value="R 3 350.00"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="total"  value="R 3 350.00"/></td>
-                  <td><a href=""><button type="button" class="btn  btn-secondary float-start" style="color: rgb(0, 0, 0); width: 30%;">
-                    <img src="../style/icons/trash.svg" />
-                    </button></a>
-                  </td> 
+                  <td><input type="text" class="txtinput"  style="width:100%" name="status"  value="New"/></td>
                 </tr>
                 <tr>
                   <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td> 
                   <td><input type="text" class="txtinput"  style="width:100%" name="qty"  value="1"/></td>
                   <td><select class="form-select" id="inputGroupSelect01">
-                    <option value="1">Pizza & Pasts Counter Sign</option>
-                    <option value="2">Grab & Go Counter Sign</option>
-                    <option value="3">Italy Silhouette</option>
+                    <option value="0">Other</option>
+                    <option value="1">RAC:218-SSB-D</option>
+                    <option value="2">RHP:DEAL/EXTCAB/CAB1.2/NOR</option>
+                    <option value="3">RHP:DEAL/LWB/HDUTY</option>
                   </select></td>
-                  <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="3mm ACM cut outs. Fitted to counter on pins"/></td>
+                  <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="Pizza & Pasts Counter Sign-3mm ACM cut outs. Fitted to counter on pins"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="3000mm x 500mm"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="amount"  value="R 4 450.00"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="total"  value="R 4 450.00"/></td>
-                  <td><a href=""><button type="button" class="btn  btn-secondary float-start" style="color: rgb(0, 0, 0); width: 30%;">
-                    <img src="../style/icons/trash.svg" />
-                    </button></a>
-                  </td> 
+                  <td><input type="text" class="txtinput"  style="width:100%" name="status"  value="New"/></td> 
                 </tr>
                 <tr>
                   <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td> 
                   <td><input type="text" class="txtinput"  style="width:100%" name="qty"  value="1"/></td>
                   <td><select class="form-select" id="inputGroupSelect01">
-                    <option value="1">Italy Silhouette</option>
-                    <option value="2">Grab & Go Counter Sign</option>
-                    <option value="3">Pizza & Pasts Counter Sign</option>
+                    <option value="0">Other</option>
+                    <option value="1">RAC:218-SSB-D</option>
+                    <option value="2">RHP:DEAL/EXTCAB/CAB1.2/NOR</option>
+                    <option value="3">RHP:DEAL/LWB/HDUTY</option>
                   </select></td>
-                  <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="3mm ACM cut outs. Fitted to wall on pins - Illuminated @ back with LED lights"/></td>
+                  <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="Italy Silhouette-3mm ACM cut outs. Fitted to wall on pins - Illuminated @ back with LED lights"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="1500mm x 1800mm"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="amount"  value="R 9 250.00"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="total"  value="R 9 250.00"/></td>
-                  <td><a href=""><button type="button" class="btn  btn-secondary float-start" style="color: rgb(0, 0, 0); width: 30%;">
-                    <img src="../style/icons/trash.svg" />
-                    </button></a>
-                  </td> 
+                  <td><input type="text" class="txtinput"  style="width:100%" name="status"  value="New"/></td>
                 </tr>
                 <tr>
                   <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td> 
                   <td><input type="text" class="txtinput"  style="width:100%" name="qty"  value="3"/></td>
                   <td><select class="form-select" id="inputGroupSelect01">
-                    <option value="1">Window Arch Display</option>
-                    <option value="2">Grab & Go Counter Sign</option>
-                    <option value="3">Pizza & Pasts Counter Sign</option>
+                    <option value="0">Other</option>
+                    <option value="1">RAC:218-SSB-D</option>
+                    <option value="2">RHP:DEAL/EXTCAB/CAB1.2/NOR</option>
+                    <option value="3">RHP:DEAL/LWB/HDUTY</option>
                   </select></td>
-                  <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="3mm Plexiglass cut outs. Fitted to counter on 20mm - standoffs. Digital print applied on back with white - backing"/></td>
+                  <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="Window Arch Display-3mm Plexiglass cut outs. Fitted to counter on 20mm - standoffs. Digital print applied on back with white - backing"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="1100mm x 1750mm"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="amount"  value="R 4 250.00"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="total"  value="R 12 750.00"/></td>
-                  <td><a href=""><button type="button" class="btn  btn-secondary float-start" style="color: rgb(0, 0, 0); width: 30%;">
-                    <img src="../style/icons/trash.svg" />
-                    </button></a>
-                  </td> 
+                  <td><input type="text" class="txtinput"  style="width:100%" name="status"  value="New"/></td>
                 </tr>
                 <tr>
                   <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td> 
                   <td><input type="text" class="txtinput"  style="width:100%" name="qty"  value="1"/></td>
                   <td><select class="form-select" id="inputGroupSelect01">
-                    <option value="1">Name Light</option>
-                    <option value="2">Grab & Go Counter Sign</option>
-                    <option value="3">Pizza & Pasts Counter Sign</option>
+                    <option value="0">Other</option>
+                    <option value="1">RAC:218-SSB-D</option>
+                    <option value="2">RHP:DEAL/EXTCAB/CAB1.2/NOR</option>
+                    <option value="3">RHP:DEAL/LWB/HDUTY</option>
                   </select></td>
-                  <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="LED Neon tube light 'Dario's Deli' - With 6mm clear backing"/></td>
+                  <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="Name Light-LED Neon tube light 'Dario's Deli' - With 6mm clear backing"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="1000mm x 400mm"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="amount"  value="R 7 650.00"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="total"  value="R 7 650.00"/></td>
-                  <td><a href=""><button type="button" class="btn  btn-secondary float-start" style="color: rgb(0, 0, 0); width: 30%;">
-                    <img src="../style/icons/trash.svg" />
-                    </button></a>
-                  </td> 
+                  <td><input type="text" class="txtinput"  style="width:100%" name="status"  value="New"/></td>
                 </tr>
                 <tr>
                   <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td> 
                   <td><input type="text" class="txtinput"  style="width:100%" name="qty"  value="20"/></td>
                   <td><select class="form-select" id="inputGroupSelect01">
-                    <option value="1">A4 Foto Canvis's</option>
-                    <option value="2">Grab & Go Counter Sign</option>
-                    <option value="3">Pizza & Pasts Counter Sign</option>
+                    <option value="0">Other</option>
+                    <option value="1">RAC:218-SSB-D</option>
+                    <option value="2">RHP:DEAL/EXTCAB/CAB1.2/NOR</option>
+                    <option value="3">RHP:DEAL/LWB/HDUTY</option>
                   </select></td>
-                  <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="PVC banner c/w digital print. - Blocked over wooden frame - Blocked over wooden frame"/></td>
+                  <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="A4 Foto Canvis's-PVC banner c/w digital print. - Blocked over wooden frame - Blocked over wooden frame"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="210mm x 295mm"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="amount"  value="R 210.00"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="total"  value="R 4 200.00"/></td>
-                  <td><a href=""><button type="button" class="btn  btn-secondary float-start" style="color: rgb(0, 0, 0); width: 30%;">
-                    <img src="../style/icons/trash.svg" />
-                    </button></a>
-                  </td> 
+                  <td><input type="text" class="txtinput"  style="width:100%" name="status"  value="New"/></td>
                 </tr>
                 <tr>
                   <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td> 
                   <td><input type="text" class="txtinput"  style="width:100%" name="qty"  value="1"/></td>
                   <td><select class="form-select" id="inputGroupSelect01">
-                    <option value="1">'Family' Logo</option>
-                    <option value="2">Grab & Go Counter Sign</option>
-                    <option value="3">Pizza & Pasts Counter Sign</option>
+                    <option value="0">Other</option>
+                    <option value="1">RAC:218-SSB-D</option>
+                    <option value="2">RHP:DEAL/EXTCAB/CAB1.2/NOR</option>
+                    <option value="3">RHP:DEAL/LWB/HDUTY</option>
                   </select></td>
-                  <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="3mm ACM cut outs. Fitted to wall on pins"/></td>
+                  <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="'Family' Logo-3mm ACM cut outs. Fitted to wall on pins"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="1000mm x 400mm"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="amount"  value="R 2 250.00"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="total"  value="R 2 250.00"/></td>
-                  <td><a href=""><button type="button" class="btn  btn-secondary float-start" style="color: rgb(0, 0, 0); width: 30%;">
-                    <img src="../style/icons/trash.svg" />
-                    </button></a>
-                  </td> 
+                  <td><input type="text" class="txtinput"  style="width:100%" name="status"  value="New"/></td>
                 </tr>
                 <tr>
                   <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="qty"  value="1"/></td>
                   <td><select class="form-select" id="inputGroupSelect01">
-                    <option value="1">Main Sign</option>
-                    <option value="2">Grab & Go Counter Sign</option>
-                    <option value="3">Pizza & Pasts Counter Sign</option>
+                    <option value="0">Other</option>
+                    <option value="1">RAC:218-SSB-D</option>
+                    <option value="2">RHP:DEAL/EXTCAB/CAB1.2/NOR</option>
+                    <option value="3">RHP:DEAL/LWB/HDUTY</option>
                   </select></td>
-                  <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="3mm Fabricated Plexi glass logo. - With 60mm returns. Internally illuminated. - Fitted on 3mm ACM Boxed back board"/></td>
+                  <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="Main Sign-3mm Fabricated Plexi glass logo. - With 60mm returns. Internally illuminated. - Fitted on 3mm ACM Boxed back board"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="5500mm x 2200mm"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="amount"  value="R 62 850.00"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="total"  value="R 62 850.00"/></td>
-                  <td><a href=""><button type="button" class="btn  btn-secondary float-start" style="color: rgb(0, 0, 0); width: 30%;">
-                    <img src="../style/icons/trash.svg" />
-                    </button></a>
-                  </td> 
+                  <td><input type="text" class="txtinput"  style="width:100%" name="status"  value="New"/></td>
                 </tr>
                 <tr>
                   <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td> 
                   <td><input type="text" class="txtinput"  style="width:100%" name="qty"  value="1"/></td>
                   <td><select class="form-select" id="inputGroupSelect01">
-                    <option value="1">Fitment</option>
-                    <option value="2">Grab & Go Counter Sign</option>
-                    <option value="3">Pizza & Pasts Counter Sign</option>
+                    <option value="0">Other</option>
+                    <option value="1">RAC:218-SSB-D</option>
+                    <option value="2">RHP:DEAL/EXTCAB/CAB1.2/NOR</option>
+                    <option value="3">RHP:DEAL/LWB/HDUTY</option>
                   </select></td>
-                  <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="1 x Cherry Picker - 1 x Fitment & Conection of all signage"/></td>
+                  <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="Fitment-1 x Cherry Picker - 1 x Fitment & Conection of all signage"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="N/A"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="amount"  value="R 3 200.00"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="total"  value="R 3 200.00"/></td>
-                  <td><a href=""><button type="button" class="btn  btn-secondary float-start" style="color: rgb(0, 0, 0); width: 30%;">
-                    <img src="../style/icons/trash.svg" />
-                    </button></a>
-                  </td> 
+                  <td><input type="text" class="txtinput"  style="width:100%" name="status"  value="New"/></td>
                 </tr>
               </tbody>
             </table>

@@ -19,19 +19,19 @@
         </a>
       </div>
       <div class="col-1 m-0 p-0 pt-1">
-        <button type="button" class="btn  btn-secondary" style="color: rgb(0, 0, 0); width: 100%;">
+        <button type="button" class="btn  btn-secondary" data-bs-toggle="offcanvas" data-bs-target="#offcanvasSave" aria-controls="offcanvasSave" style="color: rgb(0, 0, 0); width: 100%;">
             <img src="../style/icons/floppy.svg" />
             Save Quote
         </button>
       </div>
       <div class="col-1 m-0 p-0 pt-1">
-        <button type="button" class="btn  btn-secondary" style="color: rgb(0, 0, 0); width: 100%;">
+        <button type="button" class="btn  btn-secondary" onclick="addRow()" style="color: rgb(0, 0, 0); width: 100%;">
             <img src="../style/icons/plus-circle.svg" />
             New Line
         </button>
       </div>
       <div class="col-1 m-0 p-0 pt-1">
-        <button type="button" class="btn  btn-secondary" style="color: rgb(0, 0, 0); width: 100%;">
+        <button type="button" class="btn  btn-secondary" onclick="openEmailClient()" style="color: rgb(0, 0, 0); width: 100%;">
           <img src="../style/icons/envelope-check.svg" />
           Send
         </button>
@@ -43,12 +43,16 @@
           </button>
       </div>
       <div class="col-1 m-0 p-0 pt-1">
-        <button type="button" class="btn  btn-secondary" style="color: rgb(0, 0, 0); width: 100%;">
+        <button id="btn-disable1" type="button" class="btn btn-secondary invisible" data-bs-toggle="offcanvas" data-bs-target="#offcanvasCreate" aria-controls="offcanvasCreate" style="color: rgb(0, 0, 0); width: 100%;">
           <img src="../style/icons/plus-circle.svg" />
           Create Jobs
       </button>
       </div>
       <div class="col-1 m-0 p-0 pt-1">
+        <button id="btn-disable2" type="button" class="btn  btn-secondary invisible" data-bs-toggle="offcanvas" data-bs-target="#offcanvasDelete" aria-controls="offcanvasDelete" style="color: rgb(0, 0, 0); width: 100%;">
+          <img src="../style/icons/trash.svg" />
+          Delete
+          </button>
       </div>
       <div class="col-1 m-0 p-0 nav-item dropdown pt-1">
       </div>
@@ -57,11 +61,10 @@
   </div>
     <div class="row m-3">
       <div class="col-12 text-center">
-        <h3 class="display-5">Quote Detail</h3>
+        <h3 class="display-5">Quote Details</h3>
         <div class="form">
           <form method="get">
             <div class="row g-3">
-              <div class="col-1"></div>
               <div class="col-1">
                 <label for="input" class="col-form-label float-end">Quote Number:</label>
               </div>
@@ -69,11 +72,19 @@
                 <input type="text" class="form-control" name="Job Title" value="70958">
               </div>
               <div class="col-1">
+                <label for="input" class="col-form-label float-end">Quote Status:</label>
+              </div>
+              <div class="col-2">
+                <input type="text" class="form-control" name="Job Title" value="Accepted">
+              </div>
+              <div class="col-1">
                 <label for="input" class="col-form-label float-end">Date:</label>
               </div>
               <div class="col-2">
                 <input type="text" class="form-control"  name="Job Title" value="14 November 2023">
               </div>
+            </div> 
+            <div class="row g-3">
               <div class="col-1">
                 <label for="input" class="col-form-label float-end">Customer:</label>
               </div>
@@ -84,9 +95,6 @@
                   <option value="3">Customer 3</option>
                 </select>
               </div>
-            </div> 
-            <div class="row g-3">
-              <div class="col-1"></div>
               <div class="col-1">
                 <label for="input" class="col-form-label float-end">Contact Person:</label>
               </div>
@@ -111,7 +119,6 @@
               </div>
             </div>
             <div class="row g-3">
-              <div class="col-1"></div>
               <div class="col-1">
                 <label for="input" class="col-form-label float-end">Fitment Address:</label>
               </div>
@@ -181,162 +188,160 @@
                   <th style="width:10%">Size</th>
                   <th style="width:8%">Price Each</th>
                   <th style="width:8%">Total Price</th>
-                  <th style="width:9%"></th>  
+                  <th style="width:9%">Status</th>  
                 </tr> 
               </thead>
               <tbody>
                 <tr>
-                  <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td> 
+                  <td><input class="form-check-input" name="checkBox" type="checkbox" value="" id="flexCheckDefault"></td> 
                   <td><input type="text" class="txtinput"  style="width:100%" name="qty"  value="1"/></td>
                   <td><select class="form-select" id="inputGroupSelect01">
-                    <option value="1">Grab & Go Counter Sign</option>
-                    <option value="2">Pizza & Pasts Counter Sign</option>
-                    <option value="3">Italy Silhouette</option>
+                    <option value="0">Other</option>
+                    <option value="1">RAC:218-SSB-D</option>
+                    <option value="2">RHP:DEAL/EXTCAB/CAB1.2/NOR</option>
+                    <option value="3">RHP:DEAL/LWB/HDUTY</option>
+                    
                   </select></td>
-                  <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="3mm ACM cut outs. Fitted to counter on pins"/></td>
+                  <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="Grab & Go Counter Sign-3mm ACM cut outs. Fitted to counter on pins"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="1720mm x 500mm"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="amount"  value="R 3 350.00"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="total"  value="R 3 350.00"/></td>
-                  <td><a href=""><button type="button" class="btn  btn-secondary float-start" style="color: rgb(0, 0, 0); width: 30%;">
-                    <img src="../style/icons/trash.svg" />
-                    </button></a>
-                  </td> 
+                  <td><input type="text" class="txtinput"  style="width:100%" name="status"  value="Complete"/></td>
                 </tr>
                 <tr>
-                  <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td> 
+                  <td><input class="form-check-input" name="checkBox" type="checkbox" value="" id="flexCheckDefault"></td> 
                   <td><input type="text" class="txtinput"  style="width:100%" name="qty"  value="1"/></td>
                   <td><select class="form-select" id="inputGroupSelect01">
-                    <option value="1">Pizza & Pasts Counter Sign</option>
-                    <option value="2">Grab & Go Counter Sign</option>
-                    <option value="3">Italy Silhouette</option>
+                    <option value="0">Other</option>
+                    <option value="1">RAC:218-SSB-D</option>
+                    <option value="2">RHP:DEAL/EXTCAB/CAB1.2/NOR</option>
+                    <option value="3">RHP:DEAL/LWB/HDUTY</option>
                   </select></td>
-                  <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="3mm ACM cut outs. Fitted to counter on pins"/></td>
+                  <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="Pizza & Pasts Counter Sign-3mm ACM cut outs. Fitted to counter on pins"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="3000mm x 500mm"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="amount"  value="R 4 450.00"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="total"  value="R 4 450.00"/></td>
-                  <td><a href=""><button type="button" class="btn  btn-secondary float-start" style="color: rgb(0, 0, 0); width: 30%;">
-                    <img src="../style/icons/trash.svg" />
-                    </button></a>
-                  </td> 
+                  <td><input type="text" class="txtinput"  style="width:100%" name="status"  value="Complete"/></td> 
                 </tr>
                 <tr>
-                  <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td> 
+                  <td><input class="form-check-input" name="checkBox" type="checkbox" value="" id="flexCheckDefault"></td> 
                   <td><input type="text" class="txtinput"  style="width:100%" name="qty"  value="1"/></td>
                   <td><select class="form-select" id="inputGroupSelect01">
-                    <option value="1">Italy Silhouette</option>
-                    <option value="2">Grab & Go Counter Sign</option>
-                    <option value="3">Pizza & Pasts Counter Sign</option>
+                    <option value="0">Other</option>
+                    <option value="1">RAC:218-SSB-D</option>
+                    <option value="2">RHP:DEAL/EXTCAB/CAB1.2/NOR</option>
+                    <option value="3">RHP:DEAL/LWB/HDUTY</option>
                   </select></td>
-                  <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="3mm ACM cut outs. Fitted to wall on pins - Illuminated @ back with LED lights"/></td>
+                  <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="Italy Silhouette-3mm ACM cut outs. Fitted to wall on pins - Illuminated @ back with LED lights"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="1500mm x 1800mm"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="amount"  value="R 9 250.00"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="total"  value="R 9 250.00"/></td>
-                  <td><a href=""><button type="button" class="btn  btn-secondary float-start" style="color: rgb(0, 0, 0); width: 30%;">
-                    <img src="../style/icons/trash.svg" />
-                    </button></a>
-                  </td> 
+                  <td><input type="text" class="txtinput"  style="width:100%" name="status"  value="Complete"/></td>
                 </tr>
                 <tr>
-                  <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td> 
+                  <td><input class="form-check-input" name="checkBox" type="checkbox" value="" id="flexCheckDefault"></td> 
                   <td><input type="text" class="txtinput"  style="width:100%" name="qty"  value="3"/></td>
                   <td><select class="form-select" id="inputGroupSelect01">
-                    <option value="1">Window Arch Display</option>
-                    <option value="2">Grab & Go Counter Sign</option>
-                    <option value="3">Pizza & Pasts Counter Sign</option>
+                    <option value="0">Other</option>
+                    <option value="1">RAC:218-SSB-D</option>
+                    <option value="2">RHP:DEAL/EXTCAB/CAB1.2/NOR</option>
+                    <option value="3">RHP:DEAL/LWB/HDUTY</option>
                   </select></td>
-                  <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="3mm Plexiglass cut outs. Fitted to counter on 20mm - standoffs. Digital print applied on back with white - backing"/></td>
+                  <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="Window Arch Display-3mm Plexiglass cut outs. Fitted to counter on 20mm - standoffs. Digital print applied on back with white - backing"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="1100mm x 1750mm"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="amount"  value="R 4 250.00"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="total"  value="R 12 750.00"/></td>
-                  <td><a href=""><button type="button" class="btn  btn-secondary float-start" style="color: rgb(0, 0, 0); width: 30%;">
-                    <img src="../style/icons/trash.svg" />
-                    </button></a>
-                  </td> 
+                  <td><input type="text" class="txtinput"  style="width:100%" name="status"  value="Complete"/></td>
                 </tr>
                 <tr>
-                  <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td> 
+                  <td><input class="form-check-input" name="checkBox" type="checkbox" value="" id="flexCheckDefault"></td> 
                   <td><input type="text" class="txtinput"  style="width:100%" name="qty"  value="1"/></td>
                   <td><select class="form-select" id="inputGroupSelect01">
-                    <option value="1">Name Light</option>
-                    <option value="2">Grab & Go Counter Sign</option>
-                    <option value="3">Pizza & Pasts Counter Sign</option>
+                    <option value="0">Other</option>
+                    <option value="1">RAC:218-SSB-D</option>
+                    <option value="2">RHP:DEAL/EXTCAB/CAB1.2/NOR</option>
+                    <option value="3">RHP:DEAL/LWB/HDUTY</option>
                   </select></td>
-                  <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="LED Neon tube light 'Dario's Deli' - With 6mm clear backing"/></td>
+                  <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="Name Light-LED Neon tube light 'Dario's Deli' - With 6mm clear backing"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="1000mm x 400mm"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="amount"  value="R 7 650.00"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="total"  value="R 7 650.00"/></td>
-                  <td><a href=""><button type="button" class="btn  btn-secondary float-start" style="color: rgb(0, 0, 0); width: 30%;">
-                    <img src="../style/icons/trash.svg" />
-                    </button></a>
-                  </td> 
+                  <td><input type="text" class="txtinput"  style="width:100%" name="status"  value="On Job"/></td>
                 </tr>
                 <tr>
-                  <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td> 
+                  <td><input class="form-check-input" name="checkBox" type="checkbox" value="" id="flexCheckDefault"></td> 
                   <td><input type="text" class="txtinput"  style="width:100%" name="qty"  value="20"/></td>
                   <td><select class="form-select" id="inputGroupSelect01">
-                    <option value="1">A4 Foto Canvis's</option>
-                    <option value="2">Grab & Go Counter Sign</option>
-                    <option value="3">Pizza & Pasts Counter Sign</option>
+                    <option value="0">Other</option>
+                    <option value="1">RAC:218-SSB-D</option>
+                    <option value="2">RHP:DEAL/EXTCAB/CAB1.2/NOR</option>
+                    <option value="3">RHP:DEAL/LWB/HDUTY</option>
                   </select></td>
-                  <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="PVC banner c/w digital print. - Blocked over wooden frame - Blocked over wooden frame"/></td>
+                  <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="A4 Foto Canvis's-PVC banner c/w digital print. - Blocked over wooden frame - Blocked over wooden frame"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="210mm x 295mm"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="amount"  value="R 210.00"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="total"  value="R 4 200.00"/></td>
-                  <td><a href=""><button type="button" class="btn  btn-secondary float-start" style="color: rgb(0, 0, 0); width: 30%;">
-                    <img src="../style/icons/trash.svg" />
-                    </button></a>
-                  </td> 
+                  <td><input type="text" class="txtinput"  style="width:100%" name="status"  value="On Job"/></td>
                 </tr>
                 <tr>
-                  <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td> 
+                  <td><input class="form-check-input" name="checkBox" type="checkbox" value="" id="flexCheckDefault"></td> 
                   <td><input type="text" class="txtinput"  style="width:100%" name="qty"  value="1"/></td>
                   <td><select class="form-select" id="inputGroupSelect01">
-                    <option value="1">'Family' Logo</option>
-                    <option value="2">Grab & Go Counter Sign</option>
-                    <option value="3">Pizza & Pasts Counter Sign</option>
+                    <option value="0">Other</option>
+                    <option value="1">RAC:218-SSB-D</option>
+                    <option value="2">RHP:DEAL/EXTCAB/CAB1.2/NOR</option>
+                    <option value="3">RHP:DEAL/LWB/HDUTY</option>
                   </select></td>
-                  <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="3mm ACM cut outs. Fitted to wall on pins"/></td>
+                  <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="'Family' Logo-3mm ACM cut outs. Fitted to wall on pins"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="1000mm x 400mm"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="amount"  value="R 2 250.00"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="total"  value="R 2 250.00"/></td>
-                  <td><a href=""><button type="button" class="btn  btn-secondary float-start" style="color: rgb(0, 0, 0); width: 30%;">
-                    <img src="../style/icons/trash.svg" />
-                    </button></a>
-                  </td> 
+                  <td><input type="text" class="txtinput"  style="width:100%" name="status"  value="Complete"/></td> 
                 </tr>
                 <tr>
-                  <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td>
+                  <td><input class="form-check-input" name="checkBox" type="checkbox" value="" id="flexCheckDefault"></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="qty"  value="1"/></td>
                   <td><select class="form-select" id="inputGroupSelect01">
-                    <option value="1">Main Sign</option>
-                    <option value="2">Grab & Go Counter Sign</option>
-                    <option value="3">Pizza & Pasts Counter Sign</option>
+                    <option value="0">Other</option>
+                    <option value="1">RAC:218-SSB-D</option>
+                    <option value="2">RHP:DEAL/EXTCAB/CAB1.2/NOR</option>
+                    <option value="3">RHP:DEAL/LWB/HDUTY</option>
                   </select></td>
-                  <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="3mm Fabricated Plexi glass logo. - With 60mm returns. Internally illuminated. - Fitted on 3mm ACM Boxed back board"/></td>
+                  <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="Main Sign-3mm Fabricated Plexi glass logo. - With 60mm returns. Internally illuminated. - Fitted on 3mm ACM Boxed back board"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="5500mm x 2200mm"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="amount"  value="R 62 850.00"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="total"  value="R 62 850.00"/></td>
-                  <td><a href=""><button type="button" class="btn  btn-secondary float-start" style="color: rgb(0, 0, 0); width: 30%;">
-                    <img src="../style/icons/trash.svg" />
-                    </button></a>
-                  </td> 
+                  <td><input type="text" class="txtinput"  style="width:100%" name="status"  value="New"/></td> 
                 </tr>
                 <tr>
-                  <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td> 
+                  <td><input class="form-check-input" name="checkBox" type="checkbox" value="" id="flexCheckDefault"></td> 
                   <td><input type="text" class="txtinput"  style="width:100%" name="qty"  value="1"/></td>
                   <td><select class="form-select" id="inputGroupSelect01">
-                    <option value="1">Fitment</option>
-                    <option value="2">Grab & Go Counter Sign</option>
-                    <option value="3">Pizza & Pasts Counter Sign</option>
+                    <option value="0">Other</option>
+                    <option value="1">RAC:218-SSB-D</option>
+                    <option value="2">RHP:DEAL/EXTCAB/CAB1.2/NOR</option>
+                    <option value="3">RHP:DEAL/LWB/HDUTY</option>
                   </select></td>
-                  <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="1 x Cherry Picker - 1 x Fitment & Conection of all signage"/></td>
+                  <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="Fitment-1 x Cherry Picker - 1 x Fitment & Conection of all signage"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="N/A"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="amount"  value="R 3 200.00"/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="total"  value="R 3 200.00"/></td>
-                  <td><a href=""><button type="button" class="btn  btn-secondary float-start" style="color: rgb(0, 0, 0); width: 30%;">
-                    <img src="../style/icons/trash.svg" />
-                    </button></a>
-                  </td> 
+                  <td><input type="text" class="txtinput"  style="width:100%" name="status"  value="New"/></td>
+                </tr>
+                <tr>
+                  <td><input class="form-check-input" name="checkBox" type="checkbox" value="" id="flexCheckDefault"></td> 
+                  <td><input type="text" class="txtinput"  style="width:100%" name="qty"  value="1"/></td>
+                  <td><select class="form-select" id="inputGroupSelect01">
+                    <option value="1">RAC:218-SSB-D</option>
+                    <option value="2">RHP:DEAL/EXTCAB/CAB1.2/NOR</option>
+                    <option value="3">RHP:DEAL/LWB/HDUTY</option>
+                    <option value="0">Other</option>
+                  </select></td>
+                  <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="218 STAINLESS STEEL BRACKETS (INCLUDING MODIFICATION)"/></td>
+                  <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value="N/A"/></td>
+                  <td><input type="text" class="txtinput"  style="width:100%" name="amount"  value="R 689.00"/></td>
+                  <td><input type="text" class="txtinput"  style="width:100%" name="total"  value="R 689.00"/></td>
+                  <td><input type="text" class="txtinput"  style="width:100%" name="status"  value="New"/></td>
                 </tr>
               </tbody>
             </table>
@@ -344,6 +349,45 @@
         </div> 
         <div class="error"></div>
       </div>
+    </div>
+    <div class="offcanvas offcanvas-bottom bg-secondary" tabindex="-1" id="offcanvasSave" aria-labelledby="offcanvasSaveLabel">
+      <div class="offcanvas-header text-center col-12">
+        <h6 class="offcanvas-title col-12 display-6 m-0 p-0" id="offcanvasSaveLabel">Save Quote</h6>
+      </div>
+      <div class="offcanvas-body text-center col-12">
+        <p>Do you want to save this quote?</p>
+      </div>
+      <div class="text-center col-12">
+        <button type="button" class="btn btn-dark btn-outline-success col-1" data-bs-dismiss="offcanvas" aria-label="Close">Yes</button>
+        <button type="button" class="btn btn-dark col-1" data-bs-dismiss="offcanvas" aria-label="Close">No</button>
+      </div>
+      <div class="offcanvas-body"></div>
+    </div>
+    <div class="offcanvas offcanvas-bottom bg-secondary" tabindex="-1" id="offcanvasCreate" aria-labelledby="offcanvasCreateLabel">
+      <div class="offcanvas-header text-center col-12">
+        <h6 class="offcanvas-title col-12 display-6 m-0 p-0" id="offcanvasCreateLabel">Create job</h6>
+      </div>
+      <div class="offcanvas-body text-center col-12">
+        <p>Do you want to create this job?</p>
+      </div>
+      <div class="text-center col-12">
+        <button type="button" class="btn btn-dark btn-outline-success col-1" data-bs-dismiss="offcanvas" aria-label="Close">Yes</button>
+        <button type="button" class="btn btn-dark col-1" data-bs-dismiss="offcanvas" aria-label="Close">No</button>
+      </div>
+      <div class="offcanvas-body"></div>
+    </div>
+    <div class="offcanvas offcanvas-bottom bg-secondary" tabindex="-1" id="offcanvasDelete" aria-labelledby="offcanvasDeleteLabel">
+      <div class="offcanvas-header text-center col-12">
+        <h6 class="offcanvas-title col-12 display-6 m-0 p-0" id="offcanvasDeleteLabel">Delete Quote Items</h6>
+      </div>
+      <div class="offcanvas-body text-center col-12">
+        <p>Do you want to delete these quote items?</p>
+      </div>
+      <div class="text-center col-12">
+        <button type="button" class="btn btn-dark btn-outline-danger col-1" data-bs-dismiss="offcanvas" aria-label="Close">Yes</button>
+        <button type="button" class="btn btn-dark col-1" data-bs-dismiss="offcanvas" aria-label="Close">No</button>
+      </div>
+      <div class="offcanvas-body"></div>
     </div>
 
     <script src="../style/js/bootstrap.bundle.js"></script>
@@ -362,13 +406,69 @@
       // Call the function to include the navbar when the page loads
       document.addEventListener('DOMContentLoaded', includeNavbar);
 
+      function addRow() {
+        var table = document.getElementById("table2").getElementsByTagName('tbody')[0];
+        var newRow = table.insertRow(table.rows.length);
+
+        var cell1 = newRow.insertCell(0);
+        var cell2 = newRow.insertCell(1);
+        var cell3 = newRow.insertCell(2);
+        var cell4 = newRow.insertCell(3);
+        var cell5 = newRow.insertCell(4);
+        var cell6 = newRow.insertCell(5);
+        var cell7 = newRow.insertCell(6);
+        var cell8 = newRow.insertCell(7);
+
+        cell1.innerHTML = '<input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">';
+        cell2.innerHTML = '<input type="text" class="txtinput"  style="width:100%" name="qty"  value=""/>';
+        cell3.innerHTML = '<select class="form-select" id="inputGroupSelect01"><option value="0"></option><option value="1">Name Light</option><option value="2">Grab & Go Counter Sign</option><option value="3">Pizza & Pasts Counter Sign</option></select>';
+        cell4.innerHTML = '<input type="text" class="txtinput"  style="width:100%" name="descr"  value=""/>';
+        cell5.innerHTML = '<input type="text" class="txtinput"  style="width:100%" name="descr"  value=""/>';
+        cell6.innerHTML = '<input type="text" class="txtinput"  style="width:100%" name="amount"  value=""/>';
+        cell7.innerHTML = '<input type="text" class="txtinput"  style="width:100%" name="total"  value=""/>';
+        cell8.innerHTML = '<input type="text" class="txtinput"  style="width:100%" name="status"  value="New"/>';
+      }
+
       function openPDF() {
         // Replace 'path/to/your.pdf' with the actual path to your PDF file
         var pdfPath = '../pdf_templates/Darios Deli 70958 (1).pdf';
-
         // Open the PDF in a new window or tab
         window.open(pdfPath, '_blank');
       }
+      function anableButton() {
+        var disBtn1 = document.getElementById("btn-disable1");
+        var disBtn2 = document.getElementById("btn-disable2");
+        var checkbox0 = document.getElementsByName("checkBox")[0];
+        // Add event listener to the checkbox
+        checkbox0.addEventListener("change", function() {
+                // Check if the checkbox is checked
+                if (checkbox0.checked) {
+                    // Change the class when checked
+                    disBtn1.className = "btn  btn-secondary";
+                    disBtn2.className = "btn  btn-secondary";
+                } else {
+                    // Change it back when unchecked
+                    disBtn1.className = "btn btn-secondary invisible";
+                    disBtn2.className = "btn btn-secondary invisible";
+                }
+            });
+      }
+      // Function to open the user's default email client
+      function openEmailClient() {
+            // Define email details
+            var to = "recipient@example.com";
+            var subject = "Circle Rhino Quote";
+            var body = "Thank you for the query. Please find attached quote";
+            // Specify the file path to the PDF
+            var filePath = '../pdf_templates/Darios Deli 70958 (1).pdf';
+
+            // Create the mailto link
+            var mailtoLink = "mailto:" + to + "?subject=" + encodeURIComponent(subject) + "&body=" + encodeURIComponent(body);
+
+            // Open the default email client
+            window.location.href = mailtoLink;
+        }
+      anableButton();
   </script>
   </body>
 </html>

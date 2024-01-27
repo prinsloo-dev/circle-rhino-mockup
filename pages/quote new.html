@@ -49,6 +49,10 @@
       </button>
       </div>
       <div class="col-1 m-0 p-0 pt-1">
+        <button type="button" class="btn  btn-secondary" style="color: rgb(0, 0, 0); width: 100%;">
+          <img src="../style/icons/trash.svg" />
+          Delete
+          </button>
       </div>
       <div class="col-1 m-0 p-0 nav-item dropdown pt-1">
       </div>
@@ -61,7 +65,7 @@
         <div class="form">
           <form method="get">
             <div class="row g-3">
-              <div class="col-1"></div>
+              
               <div class="col-1">
                 <label for="input" class="col-form-label float-end">Quote Number:</label>
               </div>
@@ -69,11 +73,20 @@
                 <input type="text" class="form-control" name="Job Title" value="70961">
               </div>
               <div class="col-1">
+                <label for="input" class="col-form-label float-end">Quote Status:</label>
+              </div>
+              <div class="col-2">
+                <input type="text" class="form-control" name="Job Title" value="Open">
+              </div>
+              <div class="col-1">
                 <label for="input" class="col-form-label float-end">Date:</label>
               </div>
               <div class="col-2">
                 <input type="text" class="form-control"  name="Job Title" value="28 January 2024">
               </div>
+              
+            </div> 
+            <div class="row g-3">
               <div class="col-1">
                 <label for="input" class="col-form-label float-end">Customer:</label>
               </div>
@@ -85,9 +98,6 @@
                   <option value="3">Customer 3</option>
                 </select>
               </div>
-            </div> 
-            <div class="row g-3">
-              <div class="col-1"></div>
               <div class="col-1">
                 <label for="input" class="col-form-label float-end">Contact Person:</label>
               </div>
@@ -113,7 +123,7 @@
               </div>
             </div>
             <div class="row g-3">
-              <div class="col-1"></div>
+              
               <div class="col-1">
                 <label for="input" class="col-form-label float-end">Fitment Address:</label>
               </div>
@@ -183,13 +193,13 @@
                   <th style="width:10%">Size</th>
                   <th style="width:8%">Price Each</th>
                   <th style="width:8%">Total Price</th>
-                  <th style="width:9%"></th>  
+                  <th style="width:9%">Status</th>  
                 </tr> 
               </thead>
               <tbody>
                 <tr>
                   <td><input class="form-check-input" type="checkbox" value="" id="flexCheckDefault"></td> 
-                  <td><input type="text" class="txtinput"  style="width:100%" name="qty"  value="1"/></td>
+                  <td><input type="text" class="txtinput"  style="width:100%" name="qty"  value=""/></td>
                   <td><select class="form-select" id="inputGroupSelect01">
                     <option value="0"></option>
                     <option value="1">Grab & Go Counter Sign</option>
@@ -200,10 +210,7 @@
                   <td><input type="text" class="txtinput"  style="width:100%" name="descr"  value=""/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="amount"  value=""/></td>
                   <td><input type="text" class="txtinput"  style="width:100%" name="total"  value=""/></td>
-                  <td><a href=""><button type="button" class="btn  btn-secondary float-start" style="color: rgb(0, 0, 0); width: 30%;">
-                    <img src="../style/icons/trash.svg" />
-                    </button></a>
-                  </td> 
+                  <td><input type="text" class="txtinput"  style="width:100%" name="status"  value="New"/></td>
                 </tr>
               </tbody>
             </table>
