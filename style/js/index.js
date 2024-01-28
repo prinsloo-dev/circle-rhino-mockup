@@ -11,10 +11,7 @@ function addRow() {
     cell3.innerHTML = ' <a href="#" onclick="deleteRow(this)"><button type="button" class="btn btn-secondary float-start" style="color: rgb(0, 0, 0); width: 30%;"><img src="../style/icons/trash.svg" /></button></a>';
   }
 
-  function deleteRow(button) {
+function deleteRow(button) {
     var row = button.closest('tr');
     row.parentNode.removeChild(row);
-  }
-
-
-    
+}
